@@ -1,0 +1,35 @@
+@import 'common';
+
+@if ($include-margin) {
+  @each $sizeName, $size in $margin-sizes {
+    .#{$pfx}m-#{$sizeName} {
+      margin: $size $imp;
+    }
+
+    .#{$pfx}ml-#{$sizeName} {
+      margin-left: $size $imp;
+    }
+
+    .#{$pfx}mr-#{$sizeName} {
+      margin-right: $size $imp;
+    }
+
+    .#{$pfx}mt-#{$sizeName} {
+      margin-top: $size $imp;
+    }
+
+    .#{$pfx}mb-#{$sizeName} {
+      margin-bottom: $size $imp;
+    }
+
+    .#{$pfx}mh-#{$sizeName} {
+      margin-left: $size $imp;
+      margin-right: $size $imp;
+    }
+
+    .#{$pfx}mv-#{$sizeName} {
+      margin-top: $size $imp;
+      margin-bottom: $size $imp;
+    }
+  }
+}

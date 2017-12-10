@@ -1,0 +1,35 @@
+@import 'common';
+
+@if ($include-padding) {
+  @each $sizeName, $size in $padding-sizes {
+    .#{$pfx}p-#{$sizeName} {
+      padding: $size $imp;
+    }
+
+    .#{$pfx}pl-#{$sizeName} {
+      padding-left: $size $imp;
+    }
+
+    .#{$pfx}pr-#{$sizeName} {
+      padding-right: $size $imp;
+    }
+
+    .#{$pfx}pt-#{$sizeName} {
+      padding-top: $size $imp;
+    }
+
+    .#{$pfx}pb-#{$sizeName} {
+      padding-bottom: $size $imp;
+    }
+
+    .#{$pfx}ph-#{$sizeName} {
+      padding-left: $size $imp;
+      padding-right: $size $imp;
+    }
+
+    .#{$pfx}pv-#{$sizeName} {
+      padding-top: $size $imp;
+      padding-bottom: $size $imp;
+    }
+  }
+}

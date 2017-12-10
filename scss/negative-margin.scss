@@ -1,0 +1,35 @@
+@import 'common';
+
+@if ($include-negative-margin) {
+  @each $sizeName, $size in $margin-sizes {
+    .#{$pfx}m-neg-#{$sizeName} {
+      margin: -$size $imp;
+    }
+
+    .#{$pfx}ml-neg-#{$sizeName} {
+      margin-left: -$size $imp;
+    }
+
+    .#{$pfx}mr-neg-#{$sizeName} {
+      margin-right: -$size $imp;
+    }
+
+    .#{$pfx}mt-neg-#{$sizeName} {
+      margin-top: -$size $imp;
+    }
+
+    .#{$pfx}mb-neg-#{$sizeName} {
+      margin-bottom: -$size $imp;
+    }
+
+    .#{$pfx}mh-neg-#{$sizeName} {
+      margin-left: -$size $imp;
+      margin-right: -$size $imp;
+    }
+
+    .#{$pfx}mv-neg-#{$sizeName} {
+      margin-top: -$size $imp;
+      margin-bottom: -$size $imp;
+    }
+  }
+}

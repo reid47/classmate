@@ -1,5 +1,4 @@
-@import 'config';
-@import 'mixins';
+@import 'common';
 
 @if ($include-text) {
   @each $sizeName, $size in $text-sizes {

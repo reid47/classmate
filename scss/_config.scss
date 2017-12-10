@@ -1,6 +1,7 @@
 $pfx: '' !default;
 $hover-pfx: 'hover-' !default;
 $focus-pfx: 'focus-' !default;
+$always-important: false !default;
 
 $unit: 0.5rem !default;
 
@@ -33,8 +34,6 @@ $cursors: (
   help: help,
   not-allowed: not-allowed
 ) !default;
-
-$always-important: false !default;
 
 $include-color: true !default;
 $include-color-on-hover: true !default;
@@ -80,6 +79,9 @@ $include-outline-on-hover: true !default;
 $include-outline-on-focus: true !default;
 $outline-sizes: $sizes !default;
 $outline-colors: $colors !default;
+
+$include-flexbox: true !default;
+$flex-grow-shrink-max: 12 !default;
 
 ///////////////////////////////////////////////
 // INTERNAL VARIABLES                        //

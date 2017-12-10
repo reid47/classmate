@@ -1,27 +1,35 @@
-@import 'config';
+@import 'common';
 
 @if ($include-display) {
-  .#{$pfx}hide {
+  .#{$pfx}dis-hide {
     display: none $imp;
   }
 
-  .#{$pfx}block {
+  .#{$pfx}dis-block {
     display: block $imp;
   }
 
-  .#{$pfx}inline {
+  .#{$pfx}dis-inline {
     display: inline $imp;
   }
 
-  .#{$pfx}inline-block {
+  .#{$pfx}dis-inline-block {
     display: inline-block $imp;
   }
 
-  .#{$pfx}table {
+  .#{$pfx}dis-table {
     display: table $imp;
   }
 
-  .#{$pfx}table-cell {
+  .#{$pfx}dis-table-cell {
     display: table-cell $imp;
+  }
+
+  .#{$pfx}dis-flex {
+    display: flex $imp;
+  }
+
+  .#{$pfx}dis-inline-flex {
+    display: inline-flex $imp;
   }
 }

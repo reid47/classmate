@@ -1,72 +1,78 @@
-@import 'config';
+@import 'common';
 
-// TODO: rewrite to match others
+@if ($include-flexbox) {
+  .#{$pfx}dis-flex {
+    display: flex $imp;
+  }
 
-.flex {
-  display: flex;
-  box-sizing: border-box;
+  .#{$pfx}dis-inline-flex {
+    display: inline-flex $imp;
+  }
 
-  // Alignment of boxes along secondary axis
-  &.items-start { align-items: flex-start; }
-  &.items-center { align-items: center; }
-  &.items-end { align-items: flex-end; }
-  &.items-baseline { align-items: baseline; }
+  .#{$pfx}flex-row {
+    flex-direction: row $imp;
+  }
 
-  // Alignment of boxes along primary axis
-  &.justify-start { justify-content: flex-start; }
-  &.justify-center { justify-content: center; }
-  &.justify-end { justify-content: flex-end; }
-  &.justify-between { justify-content: space-between; }
-  &.justify-around { justify-content: space-around; }
-  &.justify-evenly { justify-content: space-evenly; }
-}
+  .#{$pfx}flex-col {
+    flex-direction: column $imp;
+  }
 
-.row {
-  flex-direction: row;
-  box-sizing: border-box;
+  .#{$pfx}items-start {
+    align-items: flex-start $imp;
+  }
 
-  @each $sizeName, $size in $sizes {
-    &.gap-#{$sizeName} {
-      > .box {
-        margin-left: $size;
-        margin-right: $size;
-        &:first-child { margin-left: 0; }
-        &:last-child { margin-right: 0; }
-      }
+  .#{$pfx}items-center {
+    align-items: center $imp;
+  }
+
+  .#{$pfx}items-end {
+    align-items: flex-end $imp;
+  }
+
+  .#{$pfx}items-baseline {
+    align-items: baseline $imp;
+  }
+
+  .#{$pfx}justify-start {
+    justify-content: flex-start $imp;
+  }
+
+  .#{$pfx}justify-center {
+    justify-content: center $imp;
+  }
+
+  .#{$pfx}justify-end {
+    justify-content: flex-end $imp;
+  }
+
+  .#{$pfx}justify-between {
+    justify-content: space-between $imp;
+  }
+
+  .#{$pfx}justify-around {
+    justify-content: space-around $imp;
+  }
+
+  .#{$pfx}justify-evenly {
+    justify-content: space-evenly $imp;
+  }
+
+  .#{$pfx}flex-auto {
+    flex: 1 1 auto $imp;
+  }
+
+  .#{$pfx}flex-fixed {
+    flex-grow: 0 $imp;
+    flex-shrink: 0 $imp;
+  }
+
+  @for $i from 0 through $flex-grow-shrink-max {
+    .#{$pfx}flex-grow-#{$i} {
+      flex-grow: $i $imp;
+    }
+
+    .#{$pfx}flex-shrink-#{$i} {
+      flex-shrink: $i $imp;
     }
   }
-}
-
-.col {
-  flex-direction: column;
-  box-sizing: border-box;
-
-  @each $sizeName, $size in $sizes {
-    &.gap-#{$sizeName} {
-      > .box {
-        margin-top: $size;
-        margin-bottom: $size;
-        &:first-child { margin-top: 0; }
-        &:last-child { margin-bottom: 0; }
-      }
-    }
-  }
-}
-
-.box {
-  flex: 1 1 auto;
-  box-sizing: border-box;
-
-  &.fixed {
-    flex-grow: 0;
-    flex-shrink: 0;
-  }
-
-  &.content-start, &.content-center, &.content-end {
-    display: flex;
-    flex-direction: column;
-  }
-  &.content-start { justify-content: flex-start; }
-  &.content-center { justify-content: center; }
-  &.content-end { justify-content: flex-end; }
 }

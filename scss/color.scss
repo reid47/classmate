@@ -1,4 +1,4 @@
-@import 'config';
+@import 'common';
 
 @if ($include-color) {
   @each $colorName, $color in $colors {

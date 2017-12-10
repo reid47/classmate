@@ -1,4 +1,4 @@
-@import 'config';
+@import 'common';
 
 @if ($include-cursor) {
   @each $cursorName, $cursor in $cursors {

@@ -1,5 +1,4 @@
-@import 'config';
-@import 'mixins';
+@import 'common';
 
 @if ($include-outline) {
   .#{$pfx}outline {
