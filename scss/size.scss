@@ -1,0 +1,18 @@
+@import 'config';
+@import 'mixins';
+
+@if ($include-width) {
+  @each $sizeName, $size in $width-sizes {
+    .#{$pfx}w-#{$sizeName} {
+      width: $size $imp;
+    }
+  }
+}
+
+@if ($include-height) {
+  @each $sizeName, $size in $height-sizes {
+    .#{$pfx}h-#{$sizeName} {
+      height: $size $imp;
+    }
+  }
+}

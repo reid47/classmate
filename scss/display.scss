@@ -1,0 +1,27 @@
+@import 'config';
+
+@if ($include-display) {
+  .#{$pfx}hide {
+    display: none $imp;
+  }
+
+  .#{$pfx}block {
+    display: block $imp;
+  }
+
+  .#{$pfx}inline {
+    display: inline $imp;
+  }
+
+  .#{$pfx}inline-block {
+    display: inline-block $imp;
+  }
+
+  .#{$pfx}table {
+    display: table $imp;
+  }
+
+  .#{$pfx}table-cell {
+    display: table-cell $imp;
+  }
+}

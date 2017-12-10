@@ -1,0 +1,37 @@
+@import 'config';
+
+@if ($include-color) {
+  @each $colorName, $color in $colors {
+    .#{$pfx}c-#{$colorName} {
+      color: $color $imp;
+    }
+
+    .#{$pfx}bg-#{$colorName} {
+      background-color: $color $imp;
+    }
+  }
+}
+
+@if ($include-color-on-hover) {
+  @each $colorName, $color in $colors {
+    .#{$pfx}#{$hover-pfx}c-#{$colorName}:hover {
+      color: $color $imp;
+    }
+
+    .#{$pfx}#{$hover-pfx}bg-#{$colorName}:hover {
+      background-color: $color $imp;
+    }
+  }
+}
+
+@if ($include-color-on-focus) {
+  @each $colorName, $color in $colors {
+    .#{$pfx}#{$focus-pfx}c-#{$colorName}:focus {
+      color: $color $imp;
+    }
+
+    .#{$pfx}#{$focus-pfx}bg-#{$colorName}:focus {
+      background-color: $color $imp;
+    }
+  }
+}

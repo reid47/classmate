@@ -1,0 +1,82 @@
+@import 'config';
+@import 'mixins';
+
+@if ($include-text) {
+  @each $sizeName, $size in $text-sizes {
+    @if ($include-width) {
+      .#{$pfx}t-size-#{$sizeName} {
+        font-size: $size $imp;
+      }
+    }
+  }
+
+  .#{$pfx}t-sans {
+    font-family: $font-sans $imp;
+  }
+
+  .#{$pfx}t-serif {
+    font-family: $font-serif $imp;
+  }
+
+  .#{$pfx}t-mono {
+    font-family: $font-mono $imp;
+  }
+
+  .#{$pfx}t-bold {
+    font-weight: bold $imp;
+  }
+
+  .#{$pfx}t-normal {
+    font-weight: normal $imp;
+  }
+
+  .#{$pfx}t-light {
+    font-weight: light $imp;
+  }
+
+  .#{$pfx}t-italic {
+    font-style: italic $imp;
+  }
+
+  .#{$pfx}t-lower {
+    text-transform: lowercase $imp;
+  }
+
+  .#{$pfx}t-upper {
+    text-transform: uppercase $imp;
+  }
+
+  .#{$pfx}t-capitalize {
+    text-transform: capitalize $imp;
+  }
+
+  .#{$pfx}t-align-l {
+    text-align: left $imp;
+  }
+
+  .#{$pfx}t-align-r {
+    text-align: right $imp;
+  }
+
+  .#{$pfx}t-align-c {
+    text-align: center $imp;
+  }
+
+  .#{$pfx}t-ellipsis {
+    overflow: hidden $imp;
+    text-overflow: ellipsis $imp;
+    white-space: nowrap $imp;
+  }
+
+  .#{$pfx}t-deco-none {
+    text-decoration: none $imp;
+  }
+
+  .#{$pfx}t-underline {
+    text-decoration: underline $imp;
+  }
+
+  .#{$pfx}t-strike {
+    text-decoration: line-through $imp;
+  }
+}

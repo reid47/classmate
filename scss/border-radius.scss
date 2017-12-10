@@ -1,0 +1,14 @@
+@import 'config';
+@import 'mixins';
+
+@if ($include-border-radius) {
+  @each $sizeName, $size in $border-radius-sizes {
+    .#{$pfx}br-#{$sizeName} {
+      border-radius: $size $imp;
+    }
+  }
+
+  .#{$pfx}br-circle {
+    border-radius: 100% $imp;
+  }
+}

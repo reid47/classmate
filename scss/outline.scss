@@ -1,0 +1,104 @@
+@import 'config';
+@import 'mixins';
+
+@if ($include-outline) {
+  .#{$pfx}outline {
+    outline-style: solid;
+  }
+
+  .#{$pfx}outline-dashed {
+    outline-style: dashed;
+  }
+
+  .#{$pfx}outline-dotted {
+    outline-style: dotted;
+  }
+
+  .#{$pfx}outline-none {
+    outline-style: none;
+  }
+
+  @each $sizeName, $size in $outline-sizes {
+    .#{$pfx}outline-size-#{$sizeName} {
+      outline-width: $size $imp;
+    }
+
+    .#{$pfx}outline-offset-#{$sizeName} {
+      outline-offset: $size $imp;
+    }
+  }
+
+  @each $colorName, $color in $outline-colors {
+    .#{$pfx}outline-c-#{$colorName} {
+      outline-color: $color $imp;
+    }
+  }
+}
+
+@if ($include-outline-on-hover) {
+  .#{$pfx}#{$hover-pfx}outline:hover {
+    outline-style: solid;
+  }
+
+  .#{$pfx}#{$hover-pfx}outline-dashed:hover {
+    outline-style: dashed;
+  }
+
+  .#{$pfx}#{$hover-pfx}outline-dotted:hover {
+    outline-style: dotted;
+  }
+
+  .#{$pfx}#{$hover-pfx}outline-none:hover {
+    outline-style: none;
+  }
+
+  @each $sizeName, $size in $outline-sizes {
+    .#{$pfx}#{$hover-pfx}outline-size-#{$sizeName}:hover {
+      outline-width: $size $imp;
+    }
+
+    .#{$pfx}#{$hover-pfx}outline-offset-#{$sizeName}:hover {
+      outline-offset: $size $imp;
+    }
+  }
+
+  @each $colorName, $color in $outline-colors {
+    .#{$pfx}#{$hover-pfx}outline-c-#{$colorName}:hover {
+      outline-color: $color $imp;
+    }
+  }
+}
+
+@if ($include-outline-on-focus) {
+  .#{$pfx}#{$focus-pfx}outline:focus {
+    outline-style: solid;
+  }
+
+  .#{$pfx}#{$focus-pfx}outline-dashed:focus {
+    outline-style: dashed;
+  }
+
+  .#{$pfx}#{$focus-pfx}outline-dotted:focus {
+    outline-style: dotted;
+  }
+
+  .#{$pfx}#{$focus-pfx}outline-none:focus {
+    outline-style: none;
+  }
+
+  @each $sizeName, $size in $outline-sizes {
+    .#{$pfx}#{$focus-pfx}outline-size-#{$sizeName}:focus {
+      outline-width: $size $imp;
+    }
+
+    .#{$pfx}#{$focus-pfx}outline-offset-#{$sizeName}:focus {
+      outline-offset: $size $imp;
+    }
+  }
+
+  @each $colorName, $color in $outline-colors {
+    .#{$pfx}#{$focus-pfx}outline-c-#{$colorName}:focus {
+      outline-color: $color $imp;
+    }
+  }
+}

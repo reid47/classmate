@@ -1,0 +1,9 @@
+@import 'config';
+
+@if ($include-cursor) {
+  @each $cursorName, $cursor in $cursors {
+    .#{$pfx}cursor-#{$cursorName} {
+      cursor: $cursor $imp;
+    }
+  }
+}

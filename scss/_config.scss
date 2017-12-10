@@ -1,0 +1,88 @@
+$pfx: '' !default;
+$hover-pfx: 'hover-' !default;
+$focus-pfx: 'focus-' !default;
+
+$unit: 0.5rem !default;
+
+$sizes: (
+  0: 0,
+  xs: $unit / 4,
+  s: $unit / 2,
+  m: $unit,
+  l: $unit * 2,
+  xl: $unit * 3,
+  xxl: $unit * 4,
+  auto: auto,
+  init: initial,
+  full: 100%
+) !default;
+
+$colors: (
+  red: #f00,
+  green: #0f0,
+  yellow: #0ff,
+  blue: #00f,
+  light: #fff,
+  dark: #000
+) !default;
+
+$cursors: (
+  auto: auto,
+  move: move,
+  pointer: pointer,
+  help: help,
+  not-allowed: not-allowed
+) !default;
+
+$always-important: false !default;
+
+$include-color: true !default;
+$include-color-on-hover: true !default;
+$include-color-on-focus: true !default;
+
+$include-cursor: true !default;
+$include-cursor-on-hover: true !default;
+
+$include-display: true !default;
+
+$include-text: true !default;
+$text-sizes: $sizes !default;
+$font-sans: sans-serif;
+$font-serif: serif;
+$font-mono: monospace;
+
+$include-margin: true !default;
+$margin-sizes: $sizes !default;
+
+$include-negative-margin: true !default;
+$margin-sizes: $sizes !default;
+
+$include-padding: true !default;
+$padding-sizes: $sizes !default;
+
+$include-width: true !default;
+$width-sizes: $sizes !default;
+
+$include-height: true !default;
+$height-sizes: $sizes !default;
+
+$include-border: true !default;
+$include-border-on-hover: true !default;
+$include-border-on-focus: true !default;
+$border-sizes: $sizes !default;
+$border-colors: $colors !default;
+
+$include-border-radius: true !default;
+$border-radius-sizes: $sizes !default;
+
+$include-outline: true !default;
+$include-outline-on-hover: true !default;
+$include-outline-on-focus: true !default;
+$outline-sizes: $sizes !default;
+$outline-colors: $colors !default;
+
+///////////////////////////////////////////////
+// INTERNAL VARIABLES                        //
+///////////////////////////////////////////////
+
+$imp: if($always-important, !important, null);

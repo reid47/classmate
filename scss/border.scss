@@ -1,0 +1,42 @@
+@import 'config';
+@import 'mixins';
+
+$border-types: (
+  '': '',
+  '-left': 'l',
+  '-right': 'r',
+  '-top': 't',
+  '-bottom': 'b'
+);
+
+@if ($include-border) {
+  @each $borderType, $borderName in $border-types {
+    .#{$pfx}b#{$borderName} {
+      border#{$borderType}-style: solid $imp;
+    }
+
+    .#{$pfx}b#{$borderName}-dashed {
+      border#{$borderType}-style: dashed $imp;
+    }
+
+    .#{$pfx}b#{$borderName}-dotted {
+      border#{$borderType}-style: dotted $imp;
+    }
+
+    .#{$pfx}b#{$borderName}-none {
+      border#{$borderType}-style: none $imp;
+    }
+
+    @each $sizeName, $size in $border-sizes {
+      .#{$pfx}b#{$borderName}-size-#{$sizeName} {
+        border#{$borderType}-width: $size $imp;
+      }
+    }
+
+    @each $colorName, $color in $border-colors {
+      .#{$pfx}b#{$borderName}-c-#{$colorName} {
+        border#{$borderType}-color: $color $imp;
+      }
+    }
+  }
+}

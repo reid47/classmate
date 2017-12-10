@@ -1,12 +1,6 @@
-$unit: 0.5rem;
-$sizes: (
-  0: 0,
-  s: $unit / 2,
-  m: $unit,
-  l: $unit * 2,
-  xl: $unit * 3,
-  xxl: $unit * 4
-);
+@import 'config';
+
+// TODO: rewrite to match others
 
 .flex {
   display: flex;

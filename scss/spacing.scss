@@ -1,3 +1,104 @@
-.mt-xl {
-  margin-top: 24px;
+@import 'config';
+@import 'mixins';
+
+@if ($include-margin) {
+  @each $sizeName, $size in $margin-sizes {
+    .#{$pfx}m-#{$sizeName} {
+      margin: $size $imp;
+    }
+
+    .#{$pfx}ml-#{$sizeName} {
+      margin-left: $size $imp;
+    }
+
+    .#{$pfx}mr-#{$sizeName} {
+      margin-right: $size $imp;
+    }
+
+    .#{$pfx}mt-#{$sizeName} {
+      margin-top: $size $imp;
+    }
+
+    .#{$pfx}mb-#{$sizeName} {
+      margin-bottom: $size $imp;
+    }
+
+    .#{$pfx}mh-#{$sizeName} {
+      margin-left: $size $imp;
+      margin-right: $size $imp;
+    }
+
+    .#{$pfx}mv-#{$sizeName} {
+      margin-top: $size $imp;
+      margin-bottom: $size $imp;
+    }
+  }
+}
+
+@if ($include-negative-margin) {
+  @each $sizeName, $size in $margin-sizes {
+    .#{$pfx}m-neg-#{$sizeName} {
+      margin: -$size $imp;
+    }
+
+    .#{$pfx}ml-neg-#{$sizeName} {
+      margin-left: -$size $imp;
+    }
+
+    .#{$pfx}mr-neg-#{$sizeName} {
+      margin-right: -$size $imp;
+    }
+
+    .#{$pfx}mt-neg-#{$sizeName} {
+      margin-top: -$size $imp;
+    }
+
+    .#{$pfx}mb-neg-#{$sizeName} {
+      margin-bottom: -$size $imp;
+    }
+
+    .#{$pfx}mh-neg-#{$sizeName} {
+      margin-left: -$size $imp;
+      margin-right: -$size $imp;
+    }
+
+    .#{$pfx}mv-neg-#{$sizeName} {
+      margin-top: -$size $imp;
+      margin-bottom: -$size $imp;
+    }
+  }
+}
+
+@if ($include-padding) {
+  @each $sizeName, $size in $padding-sizes {
+    .#{$pfx}p-#{$sizeName} {
+      padding: $size $imp;
+    }
+
+    .#{$pfx}pl-#{$sizeName} {
+      padding-left: $size $imp;
+    }
+
+    .#{$pfx}pr-#{$sizeName} {
+      padding-right: $size $imp;
+    }
+
+    .#{$pfx}pt-#{$sizeName} {
+      padding-top: $size $imp;
+    }
+
+    .#{$pfx}pb-#{$sizeName} {
+      padding-bottom: $size $imp;
+    }
+
+    .#{$pfx}ph-#{$sizeName} {
+      padding-left: $size $imp;
+      padding-right: $size $imp;
+    }
+
+    .#{$pfx}pv-#{$sizeName} {
+      padding-top: $size $imp;
+      padding-bottom: $size $imp;
+    }
+  }
 }
