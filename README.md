@@ -1,25 +1,17 @@
-# flox
+# classmate
 
-A small, easy-to-use CSS layout library based on flexbox. Meant to give you the full power of flexbox in only a handful of functional CSS classes.
+**A WORK-IN-PROGRESS**
 
-## Goals
-
-There are a lot of great libraries out there similar to this one (many of which served as direct inspiration). Here are some of the goals of this project that distinguish it from some others:
-
-- Allow for a few **different grid gap sizes** (a.k.a. gutter sizes), including 0 (no gap).
-
-- Use **no negative margins** anywhere, since these can sometimes lead to unexpected results when nesting grids within each other or within other layout elements.
-
-- Include support for **flex columns** (`flex-direction: column`) in addition to rows, to allow for more options in two-dimensional layouts.
+A configurable, flexible, functional CSS library.
 
 ## Developing
 
 To start developing:
 
 ```
-git clone https://github.com/reid47/flox.git
+git clone https://github.com/reid47/classmate.git
 
-cd flox
+cd classmate
 
 yarn run watch
 ```
