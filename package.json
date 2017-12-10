@@ -1,9 +1,9 @@
 {
   "name": "classmate",
   "version": "0.0.1",
-  "description": "Functional CSS library",
-  "main": "classmate.css",
-  "unpkg": "classmate.min.css",
+  "description": "Configurable, flexible, functional CSS library",
+  "main": "css/classmate.css",
+  "unpkg": "css/classmate.css",
   "scripts": {
     "serve": "./node_modules/.bin/live-server --watch=\"**/*.css,index.html\"",
     "build:scss-to-css": "./node_modules/.bin/node-sass -o css scss",
