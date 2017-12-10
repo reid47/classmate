@@ -1,0 +1,47 @@
+@import 'common';
+
+@if ($include-position) {
+  .#{$pfx}pos-absolute {
+    position: absolute $imp;
+  }
+
+  .#{$pfx}pos-relative {
+    position: relative $imp;
+  }
+
+  .#{$pfx}pos-fixed {
+    position: fixed $imp;
+  }
+
+  .#{$pfx}top-0 {
+    top: 0 $imp;
+  }
+
+  .#{$pfx}bottom-0 {
+    bottom: 0 $imp;
+  }
+
+  .#{$pfx}left-0 {
+    left: 0 $imp;
+  }
+
+  .#{$pfx}right-0 {
+    right: 0 $imp;
+  }
+
+  .#{$pfx}top-100 {
+    top: 100% $imp;
+  }
+
+  .#{$pfx}bottom-100 {
+    bottom: 100% $imp;
+  }
+
+  .#{$pfx}left-100 {
+    left: 100% $imp;
+  }
+
+  .#{$pfx}right-100 {
+    right: 100% $imp;
+  }
+}

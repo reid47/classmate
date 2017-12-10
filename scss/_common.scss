@@ -1,2 +1,4 @@
 @import 'config';
 @import 'mixins';
+
+$imp: if($always-important, !important, null);

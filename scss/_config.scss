@@ -83,8 +83,16 @@ $outline-colors: $colors !default;
 $include-flexbox: true !default;
 $flex-grow-shrink-max: 12 !default;
 
-///////////////////////////////////////////////
-// INTERNAL VARIABLES                        //
-///////////////////////////////////////////////
+$include-position: true !default;
 
-$imp: if($always-important, !important, null);
+$include-transform: true !default;
+$include-transform-on-hover: true !default;
+$include-transform-on-focus: true !default;
+$transforms: (
+  scale-up: scale(1.05, 1.05),
+  scale-down: scale(0.95, 0.95),
+  scale-x-up: scaleX(1.05),
+  scale-x-down: scaleX(0.95),
+  scale-y-up: scaleY(1.05),
+  scale-y-down: scaleY(0.95)
+) !default;

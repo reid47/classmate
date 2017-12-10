@@ -1,0 +1,25 @@
+@import 'common';
+
+@if ($include-transform) {
+  @each $transform-name, $transform in $transforms {
+    .#{$pfx}transform-#{$transform-name} {
+      transform: $transform $imp;
+    }
+  }
+}
+
+@if ($include-transform-on-hover) {
+  @each $transform-name, $transform in $transforms {
+    .#{$pfx}#{$hover-pfx}transform-#{$transform-name}:hover {
+      transform: $transform $imp;
+    }
+  }
+}
+
+@if ($include-transform-on-focus) {
+  @each $transform-name, $transform in $transforms {
+    .#{$pfx}#{$focus-pfx}transform-#{$transform-name}:focus {
+      transform: $transform $imp;
+    }
+  }
+}

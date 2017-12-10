@@ -2,19 +2,19 @@
 
 @if ($include-outline) {
   .#{$pfx}outline {
-    outline-style: solid;
+    outline-style: solid $imp;
   }
 
   .#{$pfx}outline-dashed {
-    outline-style: dashed;
+    outline-style: dashed $imp;
   }
 
   .#{$pfx}outline-dotted {
-    outline-style: dotted;
+    outline-style: dotted $imp;
   }
 
   .#{$pfx}outline-none {
-    outline-style: none;
+    outline-style: none $imp;
   }
 
   @each $sizeName, $size in $outline-sizes {
@@ -36,19 +36,19 @@
 
 @if ($include-outline-on-hover) {
   .#{$pfx}#{$hover-pfx}outline:hover {
-    outline-style: solid;
+    outline-style: solid $imp;
   }
 
   .#{$pfx}#{$hover-pfx}outline-dashed:hover {
-    outline-style: dashed;
+    outline-style: dashed $imp;
   }
 
   .#{$pfx}#{$hover-pfx}outline-dotted:hover {
-    outline-style: dotted;
+    outline-style: dotted $imp;
   }
 
   .#{$pfx}#{$hover-pfx}outline-none:hover {
-    outline-style: none;
+    outline-style: none $imp;
   }
 
   @each $sizeName, $size in $outline-sizes {
@@ -70,19 +70,19 @@
 
 @if ($include-outline-on-focus) {
   .#{$pfx}#{$focus-pfx}outline:focus {
-    outline-style: solid;
+    outline-style: solid $imp;
   }
 
   .#{$pfx}#{$focus-pfx}outline-dashed:focus {
-    outline-style: dashed;
+    outline-style: dashed $imp;
   }
 
   .#{$pfx}#{$focus-pfx}outline-dotted:focus {
-    outline-style: dotted;
+    outline-style: dotted $imp;
   }
 
   .#{$pfx}#{$focus-pfx}outline-none:focus {
-    outline-style: none;
+    outline-style: none $imp;
   }
 
   @each $sizeName, $size in $outline-sizes {
